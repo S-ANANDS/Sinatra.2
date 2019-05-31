@@ -2,20 +2,16 @@
   <head>
   <style>
   body{
-    background: orange;
+    background: <%=
+     if player_guess > answer || player_guess < answer
+      'red'  
+    elsif player_guess == answer
+      'green'
+    end
+    %> ;
   }
   </style>
-  
-  
-  
-  
-  
-  
   </head>
-  
-  
-  
-  
   <body>
     <p>
       The ANSWER is <%= answer %>
